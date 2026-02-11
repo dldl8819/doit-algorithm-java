@@ -80,3 +80,25 @@ class Min4 {
         System.out.println("최솟값은 " + min4(10, 20, 30, 5) + "입니다.");
     }
 }
+
+class Median {
+    static int med3(int a, int b, int c) {
+        if (a >= b)
+            if (b >= c)
+                return b;
+            else if (a <= c)
+                return a;
+            else
+                return c;
+        else if (a > c)
+            return a;
+        else if (b > c)
+            return c;
+        else
+            return b;
+    }
+    public static void main(String[] args) {
+        System.out.println("세 정수의 중앙값을 구합니다.");
+        System.out.println("중앙값은 " + med3(3, 78, 452) + "입니다.");
+    }
+}
